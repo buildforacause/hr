@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HR calculator!</title>
+    <link rel="stylesheet" href="proj.css">
+  </head>
+  <body>
+    <h2>Welcome To HR World</h2>
+    <div class="calculator">
+      <div class="curr">
+        <p>Enter Current Salary:&nbsp;&nbsp;<span title="The current salary of the candidate.">Info?</span></p>
+        <input type="number" name="current salary" id ="c-sal"><br>
+      </div>
+      <div class="off">
+        <p>Enter Offered Salary:&nbsp;&nbsp;<span title="The salary offered to the candidate.">Info?</span></p>
+        <input type="number" name="offered salary" id ="off-sal"><br>
+      </div>
+      <div class="bud">
+        <p>Enter Budget:&nbsp;&nbsp;<span title="The budget company has for the offered role.">Info?</span></p>
+        <input type="number" name="budget" id ="bud-get"><br><br>
+      </div>
+      <button type="button" class = "result" onclick="displayResult()">Compute</button>
+    </div>
+    <div class="result">
+      <p class = "hike_amt"></p>
+      <p class = "hike_per"></p>
+      <p class = "savings_amt"></p>
+      <p class = savings_per></p>
+    </div>
+  <script src = "project.js"></script>
+
+  </script>
+  </body>
+</html>

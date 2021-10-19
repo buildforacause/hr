@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  width: auto;
+}
+h2 {
+  padding: 30px;
+  height: 35px;
+}
+span {
+  text-decoration: underline;
+  font-size: 0.85rem;
+  color: gray;
+}

@@ -30,7 +30,7 @@
     </div>
 
     
-<hr><br><h5>Experience Calculator</h5><hr><br>
+<hr><br><h2>Experience Calculator</h2><hr><br>
 
     
       <div class="off">
@@ -51,7 +51,7 @@
         var st = document.getElementById("start-date").value;
         var en = document.getElementById("end-date").value;
         const diff = dateDiff(st, en);
-        document.getElementById("res").text = `Experience: ${diff.years} years, ${diff.months} months, ${diff.days} days.`;
+        document.getElementById("res").innerText = `Experience: ${diff.years} years, ${diff.months} months, ${diff.days} days.`;
       }
 
       function dateDiff(startDate, endDate) {
@@ -72,7 +72,6 @@
 
     return { years, months, days };
 }
-
     </script>
 
   </body>

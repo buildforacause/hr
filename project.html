@@ -28,8 +28,52 @@
       <p class = "savings_amt"></p>
       <p class = savings_per></p>
     </div>
-  <script src = "project.js"></script>
 
-  </script>
+    
+<hr><br><h5>Experience Calculator</h5><hr><br>
+
+    
+      <div class="off">
+        <p>Enter Start Date:&nbsp;&nbsp;<details><summary>Info?</summary>The start date of experience of candidate</details></p>
+        <input type="date" name="start date" id ="start-date"><br>
+      </div>
+      <div class="bud">
+        <p>Enter End Date:&nbsp;&nbsp;<details><summary>Info?</summary>The end date of experience of candidate</details></p>
+        <input type="date" name="end date" id ="end-date"><br><br>
+      </div>
+      <button type="button" class = "result1" onclick="displayResult1()">Compute</button>
+    <div class="result">
+      <p class = "hike_amt" id="res"></p>
+    </div>
+  <script src = "project.js"></script>
+    <script>
+      function displayResult1(){
+        var st = document.getElementById("start-date").value;
+        var en = document.getElementById("end-date").value;
+        const diff = dateDiff(st, en);
+        document.getElementById("res").text = `Experience: ${diff.years} years, ${diff.months} months, ${diff.days} days.`;
+      }
+
+      function dateDiff(startDate, endDate) {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    let years = end.getFullYear() - start.getFullYear();
+    let months = end.getMonth() - start.getMonth();
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+    let days = end.getDate() - start.getDate();
+    if (days < 0) {
+        months--;
+        const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+        days += prevMonth;
+    }
+
+    return { years, months, days };
+}
+
+    </script>
+
   </body>
 </html>
